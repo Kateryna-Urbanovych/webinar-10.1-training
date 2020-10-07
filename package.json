@@ -1,26 +1,25 @@
 {
-  "name": "js-22",
+  "name": "webinar-10.1-training",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-07/"
+    "build": "parcel build src/*.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/js-22.git"
+    "url": "git+https://github.com/Kateryna-Urbanovych/webinar-10.1-training"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luxplanjay/js-22/issues"
+    "url": "https://github.com/Kateryna-Urbanovych/webinar-10.1-training/issues"
   },
-  "homepage": "https://github.com/luxplanjay/js-22#readme",
+  "homepage": "https://github.com/Kateryna-Urbanovych/webinar-10.1-training#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-handlebars-precompile": "^1.0.2"
+    "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
     "lodash.throttle": "^4.1.1"
