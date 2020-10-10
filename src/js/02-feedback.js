@@ -3,13 +3,16 @@ import '../css/common.css';
 import '../css/feedback-form.css';
 
 const STORAGE_KEY = 'feedback-msg';
-// если просто повторять 'feedback-msg', то это считается плохо - паттерн магических чисел
+// если просто повторять 'feedback-msg', то это считается плохо - паттерн магических чисел и строк
 const STORAGE_FORM = 'feedback-form';
 
 const refs = {
   form: document.querySelector('.js-feedback-form'),
   textarea: document.querySelector('.js-feedback-form  textarea'),
+  checkbox: document.querySelector('input[type="checkbox"]'),
 };
+
+console.log(refs.checkbox);
 
 refs.form.addEventListener('submit', onFormSubmit);
 refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));
@@ -32,6 +35,7 @@ function onFormSubmit(event) {
   // Очищаем localStorage
   localStorage.removeItem(STORAGE_KEY); // только сообщение
   localStorage.removeItem(STORAGE_FORM); // всю форму
+  refs.checkbox.removeAttribute('checked');
 }
 
 /*
@@ -85,6 +89,11 @@ function populateForm() {
       // console.log(savedForm[key]);
       refs.form[key].value = savedForm[key];
     });
+
+    if (savedForm.checkbox === 'on') {
+      // console.log('Чекбокс включен');
+      refs.checkbox.setAttribute('checked', 'true');
+    }
   }
 }
 
