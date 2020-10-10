@@ -12,8 +12,6 @@ const refs = {
   checkbox: document.querySelector('input[type="checkbox"]'),
 };
 
-console.log(refs.checkbox);
-
 refs.form.addEventListener('submit', onFormSubmit);
 refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));
 
@@ -68,7 +66,7 @@ function populateTextarea() {
 
   // Если там что-то было, обновляем DOM
   if (savedMessage) {
-    console.log(savedMessage);
+    // console.log(savedMessage);
     refs.textarea.value = savedMessage;
   }
 }
@@ -80,12 +78,12 @@ function populateForm() {
 
   // Если там что-то было, обновляем DOM
   if (savedForm) {
-    console.log(savedForm);
+    // console.log(savedForm);
     const keysOfSavedForm = Object.keys(savedForm);
     // console.log(keysOfSavedForm);
 
     keysOfSavedForm.forEach(key => {
-      console.log(refs.form[key].value);
+      // console.log(refs.form[key].value);
       // console.log(savedForm[key]);
       refs.form[key].value = savedForm[key];
     });
